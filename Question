@@ -1,0 +1,7 @@
+
+#Install medicacloud using pip
+`pip install mediacloud`
+
+#Using mediacloud API
+"Did US Mainstream Media sources talk about Trump or Clinton more in September 2016?"
+
