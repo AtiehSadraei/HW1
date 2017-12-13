@@ -5,3 +5,23 @@
 #Using mediacloud API
 "Did US Mainstream Media sources talk about Trump or Clinton more in September 2016?"
 
+import mediacloud, datetime
+import configparser
+import matplotlib.pyplot as plt
+import numpy as np
+
+mediacloud==2.43
+numpy    
+
+config = configparser.ConfigParser()
+config.read('../config.ini')
+
+import mediacloud, json, datetime
+
+mc = mediacloud.api.MediaCloud('ee014739940d73094c1be3ad7893decb51f56c3f3c8cff857bd9bc1a10d1bed4')
+
+Obama_res = mc.sentenceCount('(Obama)', solr_filter=[mc.publish_date_query(datetime.date(2012, 9, 1), datetime.date(2012, 9, 30)) ])
+
+election_res = mc.sentenceCount('(election)', solr_filter=[mc.publish_date_query(datetime.date(2012, 9, 1), datetime.date(2012, 9, 30)) ])
+
+print(Obama_res['count']) #1917105\n"
